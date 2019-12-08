@@ -5,11 +5,10 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline>
-
+        <a-assets>
+            <a-asset-item id="duck" src="assets/duck.gltf"></a-asset-item>
+        </a-assets>
         <a-marker preset="hiro">
-            <a-assets>
-                <a-asset-item id="duck" src="assets/duck.gltf"></a-asset-item>
-            </a-assets>
             <a-entity gltf-model="#duck" rotation="-90 0 0"></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
