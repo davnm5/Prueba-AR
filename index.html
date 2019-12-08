@@ -9,10 +9,10 @@
             <a-asset-item id="duck" src="assets/duck.gltf"></a-asset-item>
         </a-assets>
         <a-marker preset="hiro">
-            <a-entity gltf-model="#duck" rotation="-90 0 0">
-                <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite">
-                </a-animation>
-            </a-entity>
+            <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite">
+                <a-entity gltf-model="#duck" rotation="-90 0 0">
+                </a-entity>
+            </a-animation>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
