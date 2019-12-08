@@ -4,15 +4,17 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.1/aframe/build/aframe-ar.js"></script>
 
 <body style='margin : 0px; overflow: hidden;'>
-    <a-scene background="color: #B9E4F3" embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;'
-        antialias="true" outline>
-        <a-assets>
+    <a-scene embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline>
+            <a-assets>
+                    <img id="sky" src="sky.jpg">
+                  </a-assets>
+                  <a-sky src="#sky"></a-sky>
+            <a-assets>
             <a-asset-item id="duck" src="assets/duck.gltf"></a-asset-item>
         </a-assets>
         <a-marker preset="hiro">
             <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 180; loop: true; dur: 10000">
-                <a-entity light="type:directional; castShadow:true;" position="1 1 1"></a-entity>
-                <a-entity gltf-model="#duck" shadow="receive: false" rotation="-90 0 0"></a-entity>
+                <a-entity gltf-model="#duck" rotation="-90 0 0"></a-entity>
             </a-entity>
         </a-marker>
         <a-entity camera></a-entity>
