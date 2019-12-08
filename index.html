@@ -4,19 +4,16 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.1/aframe/build/aframe-ar.js"></script>
 
 <body style='margin : 0px; overflow: hidden;'>
-        <a-scene  embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline>
-                <a-assets>
-                  <a-asset-item id="duck" src="assets/duck.gltf"></a-asset-item>
-                </a-assets>
-                <a-marker preset="hiro">
-                  <a-entity scale="0.08 0.08 0.08">
-                    <a-entity mmd='outline: true' afterglow:2.0;>
-                      <a-entity scale="0.03 0.03 0.03" gltf-model="#duck"></a-entity>
-                    </a-entity>
-                  </a-entity>
-                </a-marker>
-                <a-entity camera></a-entity>
-              </a-scene>
+    <a-scene embedded artoolkit='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;' antialias="true" outline>
+
+        <a-marker preset="hiro">
+            <a-assets>
+                <a-asset-item id="duck" src="assets/duck.gltf"></a-asset-item>
+            </a-assets>
+            <a-entity gltf-model="#duck" rotation="-90 0 0"></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
 </body>
 
 </html>
